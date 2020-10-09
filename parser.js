@@ -51,8 +51,14 @@ if (typeof yield === 'undefined') {
 
 if (typeof parseOption === 'undefined') {
         console.log("No secondary parse requirement provided, please make sure you have OPTION set as an environment variable for another condition.");
+} else {
+        try {
+                parseOption = parseOption.toLowerCase();
+        } catch (e) {
+                console.error(e)
+        }
 }
-parseOption = parseOption.toLowerCase();
+
 comparator = comparator.toLowerCase();
 yield = yield.toLowerCase();
 
@@ -84,7 +90,7 @@ var rerun = async function parsing() {
                                 } else {
                                         if (item[comparator].toLowerCase().includes(array) && item[comparator].toLowerCase().includes(parseOption) && !cache.includes(item[yield])) {
                                                 // Loop through all items in cache and see if they match any content in the RSS feed. If found, ignore the file and move on.
-                                                console.log(item[comparator].toLowerCase(), "Matches: ", array, " with ", parseOption )
+                                                console.log(item[comparator].toLowerCase(), "Matches: ", array, " with ", parseOption)
                                                 telegramClient.sendMessage(telegramChat, `<b>${item[comparator]}</b> \n${item[yield]}`, { parse_mode: 'HTML' });
                                                 cache.push(item[yield].toLowerCase());
                                         }
