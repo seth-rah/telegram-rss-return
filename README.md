@@ -28,17 +28,17 @@ Relpace environment variables as needed and run `docker-compose up -d` once comp
 [Set up a telegram bot](https://core.telegram.org/bots#3-how-do-i-create-a-bot) and get the `Bot Token`. Then add the bot to a group, make it admin and [extract the Chat ID](https://stackoverflow.com/a/32572159/882223).
 
 ```
-Telegram Bot Token                            		= TELEGRAM_BOT_TOKEN
-Telegram Chat ID                              		= TELEGRAM_CHAT_ID
+Telegram Bot Token                            		=	TELEGRAM_BOT_TOKEN
+Telegram Chat ID                              		=	TELEGRAM_CHAT_ID
 ```
 
 ### RSS
 
 ```
-URL that you are monitoring for RSS updates	  =	RSS_URL
-Value you are comparing to Bases.txt              =	COMPARATOR
-Value you want to return if comparator passes     =	YIELD
-Additional value you want to pass with Bases.txt  =	OPTION
+URL that you are monitoring for RSS updates		=	RSS_URL
+Value you are comparing to Bases.txt          		=	COMPARATOR
+Value you want to return if comparator passes    	=	YIELD
+Additional value you want to pass with Bases.txt 	=	OPTION
 ```
 
 ## Volumes
