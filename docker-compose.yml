@@ -1,0 +1,19 @@
+version: "2"
+services:
+  rssnotifications:
+    image: sethrah/telegramrssreturn
+# NOT REQUIRED
+#    restart: always
+    volumes: 
+      - "./Bases.txt:/usr/src/parser/Bases.txt"
+# NOT REQUIRED
+#      - "./cache.txt:/usr/src/parser/cache.txt"
+    environment:
+      - TELEGRAM_BOT_TOKEN=...
+      - TELEGRAM_CHAT_ID=...
+      - RSS_URL=https://nyaa.si/?page=rss
+      - COMPARATOR=title
+# NOT REQUIRED
+#      - OPTION=1080p
+      - YIELD=link
+    network_mode: "bridge"

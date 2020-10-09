@@ -1,0 +1,29 @@
+{
+  "name": "telegram-rss-return",
+  "version": "1.0.0",
+  "description": "compares a file to rss feed, and returns a property from the rss feed based on that file",
+  "main": "parser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Seth-Rah",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "parser.js": "^1.0.0",
+    "rss-parser": "^3.9.0",
+    "telegraf": "^3.38.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seth-rah/telegram-rss-return.git"
+  },
+  "keywords": [
+    "rss"
+  ],
+  "bugs": {
+    "url": "https://github.com/seth-rah/telegram-rss-return/issues"
+  },
+  "homepage": "https://github.com/seth-rah/telegram-rss-return#readme"
+}
