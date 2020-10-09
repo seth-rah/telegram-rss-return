@@ -35,10 +35,10 @@ Telegram Chat ID                              		= TELEGRAM_CHAT_ID
 ### RSS
 
 ```
-URL that you are monitoring for RSS updates				=	RSS_URL
-Value you are comparing to Bases.txt	 						=	COMPARATOR
-Value you want to return if comparator passes			=	YIELD
-Additional value you want to pass with Bases.txt	=	OPTION
+URL that you are monitoring for RSS updates	  =	RSS_URL
+Value you are comparing to Bases.txt              =	COMPARATOR
+Value you want to return if comparator passes     =	YIELD
+Additional value you want to pass with Bases.txt  =	OPTION
 ```
 
 ## Volumes
