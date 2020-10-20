@@ -92,14 +92,22 @@ var rerun = async function parsing() {
 					if (item[comparator].toLowerCase().includes(array) && !cache.includes(item[yield])) {
 						// Loop through all items in cache and see if they match any content in the RSS feed. If found, ignore the file and move on.
 						console.log(item[comparator].toLowerCase(), "Matches: ", array)
+						if (comparator != yield){
 						telegramClient.sendMessage(telegramChat, `<b>${item[comparator]}</b> \n${item[yield]}`, { parse_mode: 'HTML' });
+					} else {
+						telegramClient.sendMessage(telegramChat, `<b>${item[comparator]}</b>`, { parse_mode: 'HTML' });
+					}
 						cache.push(item[yield].toLowerCase());
 					}
 				} else {
 					if (item[comparator].toLowerCase().includes(array) && item[comparator].toLowerCase().includes(parseOption) && !cache.includes(item[yield])) {
 						// Loop through all items in cache and see if they match any content in the RSS feed including the parse Option. If found, ignore the file and move on.
 						console.log(item[comparator].toLowerCase(), "Matches: ", array, " with ", parseOption)
-						telegramClient.sendMessage(telegramChat, `<b>${item[comparator]}</b> \n${item[yield]}`, { parse_mode: 'HTML' });
+						if (comparator != yield){
+							telegramClient.sendMessage(telegramChat, `<b>${item[comparator]}</b> \n${item[yield]}`, { parse_mode: 'HTML' });
+						} else {
+							telegramClient.sendMessage(telegramChat, `<b>${item[comparator]}</b>`, { parse_mode: 'HTML' });
+						}
 						cache.push(item[yield].toLowerCase());
 					}
 				}
